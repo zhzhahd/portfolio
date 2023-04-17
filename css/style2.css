@@ -166,6 +166,10 @@ p,td{font-size: 1vw;}
 
 #avatar{position: relative;}
 
+
+
+
+
 #control{width: 40%; position:fixed; z-index: 999; bottom: 2%; right: 0; }
 #control button{width: 32%; color: #333; padding: 2.5% 1%; border: 1px solid #333; background: #fff;}
 #control button:hover{color: #fff; background: #333; transition: all 0.5s;}
