@@ -266,7 +266,10 @@ $(document).ready(function(){
         $('#profile-bottom').addClass('up2');
       });
       
-
+      $(".s1_arrow").click(function(){
+        $('#profile-top').addClass('up');
+        $('#profile-bottom').addClass('up2');
+      });
 
 
 
@@ -304,6 +307,12 @@ anime.timeline({loop: true})
   });
 
 
+  // $('#control button').click(function(){
+  //   $('#control button').css({'background':'#fff'},{'color':'#333'});
+  //   $(this).css({'background':'gold'},{'color':'red'});
+  //   // $('#control button').removeClass('click-back');
+  //   // $(this).addClass('click-back');
+  // });
 
 
 
