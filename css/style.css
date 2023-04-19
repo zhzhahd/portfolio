@@ -11,47 +11,36 @@ body {
   background-color: #17182f;
 }
 
-canvas {
-  display: block;
-}
-
 #wrap{width: 100%; overflow: hidden;}
 #slide-wrap{width: 300%;}
 .slide{width: calc(100% / 3); height: 100vh; float: left; position: relative;}
 
-/* slide1 */
-.slide:nth-child(1) p{text-shadow: 5px 5px 12px black; font-weight: bold; position: absolute; top: 55%; left: 50%; z-index: 100; color: #fff; width: 50%; letter-spacing: 0.2vw;}
+/*** slide1 ***/
+.slide:nth-child(1){ box-sizing: border-box;}
+.slide:nth-child(1) .ani{top: -16%;}
+#project-nav{ width: 100%;}
+#project-nav ul{display: flex; justify-content: flex-end; padding: 1% 1.5%;}
+#project-nav ul li{color:#f3f3f3; width: 2%; margin: 1.5%;}
+#project-nav ul li:hover{transform: scale(1.1); transition: all 0.3s; border-bottom: 1px solid gold;}
+#project-nav ul li p{text-align: center; padding-top: 5%; font-size: 80%;}
+#project-nav ul li div{width: 100%; height: 50%; }
+#project-nav ul li div img{width: 100%; height: 100%;}
 
-#main-text1{font-size: 6vw; transform: translate(-46%,0%); transition: all 2s; color: gold; opacity: 0; padding-left: 4%; line-height: 3vw;}
-#main-text2{font-size: 7.5vw; transform: translate(-45%,-15%); text-align: right; padding-left: 10%;}
+#project-text{padding-top: 6.5%; position: sticky;}
+#project-text p{ text-align: center; line-height: 5vw; font-weight: bold;}
+#project-text p:first-child{letter-spacing: 0.6vw; font-size: 4vw;}
+#project-text p:first-child span{color: gold; letter-spacing: 0.6vw; font-size: 4vw;}
+#project-text p:last-child{letter-spacing: 1.5vw; padding-top: 3%; color: gray;}
 
+#profile-detail{width: 100%; background: #eee; height: 100vw; border-radius: 40% 40% 0 0; margin: 0 auto;}
+svg{position: absolute; top: 500px; left: 0;}
+#back{width: 100%; height: 100vh; position: absolute; top:0; left:0; z-index: -1;}
+#moon{width: 7%; position: absolute; top: 5%; left: 2.5%; opacity: 0.8; transform: rotate(-10deg);}
+ 
 
+/*** slide2 ***/
 
-#point{border: 2.5vw solid #fff; width: 20%; height: 35%; position: absolute; top: -5%; left: 12%; z-index: 555;}
-#point-text{position: absolute; z-index: 555; top: 35%; left: 3%; transform:rotate(-270deg); letter-spacing: 0.2vw; font-weight: bold; opacity: 0.8;}
-
-.ani{position: relative; top: 50%;}
-.s1_arrow{cursor: pointer; position:absolute; top:50%; right: 5%; z-index: 555; margin-left:-10px; animation:arrow_down 1.5s infinite; }
-.scroll-arrow {width:1vw; height:1vw; border-right: 5px solid white; border-bottom: 5px solid white; float:left;
- transform: rotate(315deg); -webkit-transform: rotate(315deg); -moz-transform: rotate(315deg); -o-transform: rotate(315deg);  -ms-transform: rotate(315deg);
- animation: arrow-wave 1s infinite; animation-direction: alternate;}
-.scroll-arrow:nth-child(1) {animation-delay: 0.5s;}
-.scroll-arrow:nth-child(2) {animation-delay: 0.2s;}
-
- /* slide 이동 아이콘 */
-  @keyframes arrow-wave {
-    0% {opacity: 0;}
-    50% {opacity: .5;}
-    100% {opacity: 1;}
-  }
-  @keyframes arrow_down{
-    0%{top:28px;}
-    50%{top:40px;}
-    100%{top:28px;}
-  }
-
-/* slide2 */
-
+/* slide2 content up */
 .up{
   animation:up 1s 0.5s linear both;
 }
@@ -75,7 +64,8 @@ canvas {
 .slide:nth-child(2) h2{font-size: 3vw; color: #333;}
 .slide:nth-child(2) hr{margin-bottom: 2%;}
 
-/* profile ani text */
+
+/*slide2 profile ani text */
 .ml9 {
     position: relative;
     font-weight: 200;
@@ -115,9 +105,9 @@ canvas {
 #memory-wrap{position: relative;}
 #memory{position: absolute; top: 23%; right: 38%; width: 13vw; height: 5vw; z-index: 1;}
 
-#smile{position: absolute; top:-8%; right: -8%; width: 20%;}
+#smile{position: absolute; top:-10%; right: -12%; width: 28%;}
 #skill{width: 27%; height: 20vw; background:#fff; position: relative; border-radius: 15px; border: 1px solid gray; margin-right: 1%;}
-#skill table{padding: 3% 5%; width: 100%; height: 100%;}
+#skill table{padding: 3% 5% 3% 6%; width: 100%; height: 100%;}
 #skill table tr{width: 100%;}
 #skill table tr td{ color: #333;}
 #skill table tr td:first-child{width: 36%;}
@@ -131,39 +121,22 @@ canvas {
 #skill table tr:nth-child(4) td:last-child p span{ width: 75%;}
 #skill table tr:nth-child(5) td:last-child p span{ width: 70%;}
 
-#profile-bottom{width: 100%; height: 20%; padding: 2%; background: #f5e7c0; border-radius: 0 0 40px 40px; transform: translateY(200px);}
+#profile-bottom{width: 100%; padding: 2%; background: #f5e7c0; border-radius: 0 0 40px 40px; transform: translateY(200px);}
 #profile-bottom p{font-size: 1.2vw; padding-bottom: 1.2vw; color: #333;} 
-
-#back2{width: 100%; height: 100vh; position: absolute; top:0; left:0; z-index: -1;}
-
-
-/* slide3 */
-.slide:nth-child(3){ box-sizing: border-box; overflow: scroll;}
-#project-nav{ width: 100%;}
-#project-nav ul{display: flex; justify-content: flex-end; padding: 1% 1.5%;}
-#project-nav ul li{color:#f3f3f3; width: 2%; margin: 1.5%;}
-#project-nav ul li:hover{transform: scale(1.1); transition: all 0.3s; border-bottom: 1px solid gold;}
-#project-nav ul li p{text-align: center; padding-top: 5%; font-size: 80%;}
-#project-nav ul li div{width: 100%; height: 50%; }
-#project-nav ul li div img{width: 100%; height: 100%;}
-
-#project-text{padding-top: 7%; position: sticky;}
-#project-text p{ text-align: center; line-height: 5vw; font-weight: bold;}
-#project-text p:first-child{letter-spacing: 0.6vw; font-size: 4vw;}
-#project-text p:first-child span{color: gold; letter-spacing: 0.6vw; font-size: 4vw;}
-#project-text p:last-child{letter-spacing: 1.5vw; padding-top: 3%; color: gray;}
-
-#profile-detail{width: 100%; background: #eee; height: 100vw; border-radius: 40% 40% 0 0; margin: 0 auto;}
-svg{position: absolute; top: 500px; left: 0;}
-#back{width: 100%; height: 100vh; position: absolute; top:0; left:0; z-index: -1;}
+#profile-bottom ul li{font-size: 0.9vw;}
 
 
+
+/*** slide3 ***/
+.slide:nth-child(3){padding: 1% 1.5%;}
+#project-main-text h2{color: #f3f3f3; font-size: 4vw; padding: 10% 0 0 5%;}
+#project-main-text p{color: gray; font-size: 2.5vw; letter-spacing: 1vw; padding: 1% 0 0 5%;}
 
 
 
 
 #control{width: 40%; position:fixed; z-index: 999; bottom: 2%; right: 0; }
-#control button{width: 32%; color: #333; padding: 2.5% 1%; border: 1px solid #333; background: #fff;}
+#control button{width: 32%; color: #333; padding: 2.5% 1%; background: #fff; border: none; box-shadow: 2px 2px 6px gray;}
 #control button:hover{color: #fff; background: #333; transition: all 0.5s;}
 #control button:first-child{background: #333;color: #fff;}
 #control button:first-child:hover{background: #fff; color: #333;}
@@ -171,7 +144,24 @@ svg{position: absolute; top: 500px; left: 0;}
 
 .click-back{background: gold;}
 
-
+/* slide 이동 아이콘 */
+  @keyframes arrow-wave {
+    0% {opacity: 0;}
+    50% {opacity: .5;}
+    100% {opacity: 1;}
+  }
+  @keyframes arrow_down{
+    0%{top:28px;}
+    50%{top:40px;}
+    100%{top:28px;}
+  }
+.ani{position: relative; top: 50%;}
+.s1_arrow{cursor: pointer; position:absolute; top:50%; right: 5%; z-index: 555; margin-left:-10px; animation:arrow_down 1.5s infinite; }
+.scroll-arrow {width:1vw; height:1vw; border-right: 5px solid white; border-bottom: 5px solid white; float:left;
+ transform: rotate(315deg); -webkit-transform: rotate(315deg); -moz-transform: rotate(315deg); -o-transform: rotate(315deg);  -ms-transform: rotate(315deg);
+ animation: arrow-wave 1s infinite; animation-direction: alternate;}
+.scroll-arrow:nth-child(1) {animation-delay: 0.5s;}
+.scroll-arrow:nth-child(2) {animation-delay: 0.2s;}
 
 
 
