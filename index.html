@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO - Tak yurim</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.6.4.min.js"></script>
-    <script src="js/script.js"></script>
+
+    <script src="js/jquery-3.6.4.min.js"></script>    
     <script src="https://kit.fontawesome.com/7b6d17b275.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -239,20 +243,26 @@
                         <li>2023.04.19 웹디자인기능사 자격증</li><br>
                         <li>2021.09 ~ 2022.10 안산 선부재활의학과</li>
                         <li>2022.10 ~ 2023.05 UI/UX 반응형 웹디자인&웹퍼블리셔 NCS 과정 수료</li>
-
                     </ul>
                 </div>
-
             </li>
+
+
             <!-- slide3 -->
             <li class="slide">
-                <div id="project-main-text">
-                    <h2>PROJECT</h2>
-                    <p>_____first</p>
-                </div>
+                <!-- <div id="project-slide"></div> -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">Slide 1</div>
+                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide">Slide 3</div>
+                          <div class="swiper-slide">Slide 4</div>
+                          <div class="swiper-slide">Slide 5</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 
-
-
+                <script src="./js/swiper.js"></script>
 
 
             </li>

@@ -132,12 +132,12 @@ $(document).ready(function(){
     });
 
     function light(){
-      $('#moon').animate({opacity:0.5},3500, function(){
+      $('#moon').animate({opacity:0.5},1500, function(){
         $('#moon').animate({opacity:1});
       });
     }
 
-    setInterval(light, 2000);
+    setInterval(light, 1000);
 
 
     //slide2 animation text    
@@ -215,5 +215,9 @@ anime.timeline({loop: true})
   $('#control button:first').click(function(){
     $(this).css({"color": "#333", "background": "gold"});
   });
+
+
+
+
 
 });
