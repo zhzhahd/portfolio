@@ -131,18 +131,50 @@ svg{position: absolute; bottom: -3%; left: 0; z-index: 6;}
 .swiper { width: 100%; height: 100%; }
 
 
-.swiper-slide:nth-child(1){background: rgb(243,243,243);
-  background: linear-gradient(180deg, rgba(243,243,243,0) 25%, rgba(0,0,0,1) 100%);}
-#swiper-center{display: flex; justify-content: center; flex-wrap: wrap; padding-top: 5%;}
+.swiper-slide:nth-child(1){background: rgb(243,243,243); background: linear-gradient(180deg, rgba(243,243,243,0) 25%, rgba(0,0,0,1) 100%);}
+
+
+#swiper-center{display: flex; justify-content: center; flex-wrap: wrap; padding: 5% 0;}
 #swiper-center p{line-height: 2vw; text-align: center;}
-#swiper1-main-text{padding: 5% 0; font-size: 1.5vw; width: 100%; letter-spacing: 0.5vw;}
+#swiper-center p:nth-child(3){font-weight: 600; font-size: 2vw;}
+
+#swiper1-main-text{padding: 5% 0 2%; font-size: 1.5vw; width: 100%; letter-spacing: 0.5vw;}
 #swiper1-side-text{position:absolute; left:1%; top: 20%; color: lightgray; letter-spacing: 0.3vw; transform: rotate(90deg); }
+.ml3{position:absolute; left:1%; top: 20%; color: lightgray; letter-spacing: 0.3vw; transform: rotate(90deg); }
 #moon2{width: 15%; transform: rotate(-16deg);}
 
+#cloud1{position: absolute; width: 35%; top: 55%;}
+#cloud2{position: absolute; width: 40%; top: 55%; right: -10%;}
+#cloud3{position: absolute; width: 25%; top: 40%; right: -8%; transform: rotate(5deg);}
+#cloud4{position: absolute; width: 20%; top: 45%;}
+
+/* 마우스 휠 애니 */
+.scroll-down{ position: absolute; bottom: 5.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center;}
+.scroll{ width: 2rem; height: 4rem; border: 2px solid #fefefe; border-radius: 2rem; display: flex; justify-content: center; align-items: center;}
+.scroll span{ width: 0.8rem; height: 0.8rem; border-radius: 50%; background: #fefefe; display: block; animation: cursor 1.15s linear infinite;}
+.arrow-down{ width: 0.8rem; height: 0.8rem; border: 2px solid transparent; border-right-color: #fefefe; border-bottom-color: #fefefe; transform: rotate(45deg); margin-top: 0.3rem; animation:  arrow 1.15s linear infinite;}
+
+@keyframes cursor{
+  0%{
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes arrow{
+  0%  {opacity: 0;}
+  25% {opacity: 0.25;}
+  50% {opacity: 0.5;}
+  75% {opacity: 0.75;}
+  100%{opacity: 1;}
+}
 
 
-
-.swiper-slide:nth-child(2)
+.swiper-slide:nth-child(2){background: black;}
 .swiper-slide:nth-child(3)
 .swiper-slide:nth-child(4)
 .swiper-slide:nth-child(5)
