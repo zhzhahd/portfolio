@@ -172,11 +172,11 @@ $(document).ready(function(){
 
 
 
-      // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml11 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+  // Wrap every letter in a span
+  var textWrapper = document.querySelector('.ml11 .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
+  anime.timeline({loop: true})
   .add({
     targets: '.ml11 .line',
     scaleY: [0,1],
@@ -204,7 +204,6 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
-
 
 
   $('#control button').click(function(){
