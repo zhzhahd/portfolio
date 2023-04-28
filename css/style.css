@@ -202,6 +202,7 @@ svg{position: absolute; bottom: -3%; left: 0; z-index: 6;}
 #swiper2-img{width: 65%;}
 .show-out{width: 100%; position: relative;}
 .show-out>img{width: 100%; height: 65vh; position: absolute; top: 0; left: 0;}
+.show-out>img:hover{transform: scale(1.02); transition: all 0.5s;}
 .show-in{width: 90%; margin: 0 auto; position: absolute;  z-index: -1; top: 0; left: 0; overflow: hidden;}
 .show-in>img{width: 100%;}
 
